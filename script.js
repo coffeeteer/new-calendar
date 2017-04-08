@@ -1,4 +1,6 @@
-window.onload = function(){
+$(document).ready(function() {
+    console.log( "ready!" );
+
 	var d = new Date();
 	var month_name = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 	var month = d.getMonth(); // return a value of 0-11 corresponding with the 12 months
@@ -12,7 +14,7 @@ window.onload = function(){
 	var calendar = get_calendar(day_no, days);
 	document.getElementById('calendar-month-year').innerHTML =  month_name[month] +  " " + year;
 	document.getElementById('calendar-dates').appendChild(calendar);
-}
+
 
 	function get_calendar(day_no, days) {
 		var table = document.createElement('table');
@@ -64,3 +66,4 @@ window.onload = function(){
 		}
 	}
 
+});
